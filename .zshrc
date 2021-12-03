@@ -12,6 +12,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Fix delete key operation (needs more investigation)
+# function zle-line-init () { echoti smkx }
+# function zle-line-finish () { echoti rmkx }
+# zle -N zle-line-init
+# zle -N zle-line-finish
+
 PROMPT='%B%F{red}%D %*%F{blue}%n@%M%F{green}%2d%B%F{black} '
 
 # Global aliases
@@ -23,4 +29,5 @@ alias -g igot="pacman -Qs"
 # Configuration aliases
 alias -g config-zsh="nvim ~/.zshrc ; source ~/.zshrc"
 alias -g config-i3="nvim ~/.config/i3/config ; i3-msg reload"
+alias -g config-nvim="nvim ~/.config/nvim/init.vim ; source ~/.config/nvim/init.vim"
 
