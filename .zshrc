@@ -18,7 +18,7 @@ compinit
 # zle -N zle-line-init
 # zle -N zle-line-finish
 
-PROMPT='%B%F{red}%D %*%F{blue}%n@%M%F{green}%2d%B%F{black} '
+PROMPT='[%B%F{red}%T%F{default}|%F{blue}%n@%M%F{default}|%F{green}%1d%B%F{default}]$ '
 
 # Global aliases
 alias -g ea="nvim ~/.zshrc ; source ~/.zshrc ; echo 'Aliases sourced from ~/.zshrc'"
